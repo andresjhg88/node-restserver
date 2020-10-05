@@ -1,6 +1,6 @@
 require('./config/config');
 
-const express = require('express')
+const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())//app.use son midelwers hace referencia a funciones que se disparan cada vez que pase por aqui el codigo.
 // cada peticion que se realiza pasa por estas lineas. 
 
-app.use( require('./rutes/usuario') );
+
+// Configuracion global de rutas
+app.use( require('./routes/index'));
 
 mongoose.connect(process.env.URLDB,{
 
