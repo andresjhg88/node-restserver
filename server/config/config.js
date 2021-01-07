@@ -45,6 +45,12 @@ if ( process.env.NODE_ENV === 'dev' ){
 }
 process.env.URLDB = urlDB;
 
+//=================================
+//Google Client ID
+//=================================
+
+process.env.CLIENT_ID = process.env.CLIENT_ID || '481801740789-jej6ehe54kevtjhn9maf8cldlpnq6c7l.apps.googleusercontent.com';
+
 
 //mongodb+srv://a88:<password>@cluster0-xdxcj.mongodb.net/test
 //'mongodb+srv://a88:AUH5ozv3HLaRbvDl@cluster0-xdxcj.mongodb.net/test?retryWrites=true&w=majority'
